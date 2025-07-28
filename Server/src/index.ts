@@ -64,6 +64,13 @@ app.get("/content",Auth,async(req,res)=>{
     const contents=await contentModel.find({userId}).populate("userId","email");
     res.json(contents)
 })
+app.get("/content/youtube",Auth,async(req,res)=>{
+     //@ts-ignore
+    const userId=req.userId;
+    const title="youtube"
+    const contents=await contentModel.find({title}).populate("userId","email");
+    res.json(contents)
+})
 app.delete("/content/:id",Auth,async(req,res)=>{
     //@ts-ignore
     const id=req.params.id;

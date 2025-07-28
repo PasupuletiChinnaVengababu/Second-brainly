@@ -71,6 +71,13 @@ app.get("/content", auth_js_1.Auth, (req, res) => __awaiter(void 0, void 0, void
     const contents = yield contentModel_1.contentModel.find({ userId }).populate("userId", "email");
     res.json(contents);
 }));
+app.get("/content/youtube", auth_js_1.Auth, (req, res) => __awaiter(void 0, void 0, void 0, function* () {
+    //@ts-ignore
+    const userId = req.userId;
+    const title = "youtube";
+    const contents = yield contentModel_1.contentModel.find({ title }).populate("userId", "email");
+    res.json(contents);
+}));
 app.delete("/content/:id", auth_js_1.Auth, (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     //@ts-ignore
     const id = req.params.id;
