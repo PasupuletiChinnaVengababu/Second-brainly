@@ -1,0 +1,1 @@
+{"root":["./src/index.ts","./src/random.ts","./src/middleware/auth.ts","./src/models/contentmodel.ts","./src/models/usermodel.ts"],"version":"5.8.3"}
