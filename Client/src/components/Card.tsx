@@ -31,7 +31,7 @@ const Card = () => {
       <div className="flex  flex-wrap gap-4">
         {datas?.map((d)=>(
             <>
-            {d.title=="youtube"? <div className="bg-white border shadow-md px-3 py-3  text-gray-600 max-w-72 rounded-lg">
+            {d.title=="youtube"? <div className="bg-white border shadow-md px-3 py-3  text-gray-600 max-h-96 gap -4 max-w-72 rounded-lg">
           <div className="flex justify-between gap-3">
             <div>
               <svg
@@ -45,7 +45,8 @@ const Card = () => {
             </div>
             <div className="flex gap-3">
               <div>
-                <ShareIcon />
+                <a href={`https://www.youtube.com/watch?v=${d.link}`}> <ShareIcon /></a>
+                
               </div>
               <div>
                 <PlusIcon />
@@ -79,7 +80,8 @@ const Card = () => {
             </div>
             <div className="flex gap-3">
               <div>
-                <ShareIcon />
+                <a href={d.link}><ShareIcon /></a>
+                
               </div>
               <div>
                 <PlusIcon />
